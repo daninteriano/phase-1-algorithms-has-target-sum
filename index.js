@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++){
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++){
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,8 +15,10 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
-
+  writing a function where we input two parameters
+  an array of integers and a TARGET integer
+  returning true should TWO pairs of numbers in the array add up to the TARGET number 
+  
 /*
   Add written explanation of your solution here
 */
